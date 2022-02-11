@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -11,37 +10,39 @@ namespace ConsoleApp2
         {
 
             var check = 1;
+            string fileName = @"test.txt";
+            StreamWriter streamWriter;
 
             while (check != 0)
             {
-                Console.WriteLine("Wpisz 1 aby wyslac request, 0 aby zakonczyc");
-
+                Console.WriteLine("\nwrite '1' to send request, write '0' to exit");
                 check = int.Parse(Console.ReadLine());
-
-                ServicePointManager.Expect100Continue = true;
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                string json = new WebClient().DownloadString("https://catfact.ninja/fact");
-
-                string path = @"testowy.txt";
-                StreamWriter sw;
-
-                if (!File.Exists(path))
+                if (check==1)
                 {
-                    sw = File.CreateText(path);
-                    Console.WriteLine("created new file");
-                }
-                else
-                {
-                    sw = new StreamWriter(path, true);
-                }
-                sw.WriteLine(json);
-                sw.Close();
+                    ServicePointManager.Expect100Continue = true;
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                    string json = new WebClient().DownloadString("https://catfact.ninja/fact");
 
-                Console.WriteLine(json);
+
+
+                    if (!File.Exists(fileName))
+                    {
+                        streamWriter = File.CreateText(fileName);
+                        Console.WriteLine($"created new file: {fileName}");
+                    }
+                    else
+                    {
+                        streamWriter = new StreamWriter(fileName, true);
+                    }
+                    streamWriter.WriteLine(json);
+                    streamWriter.Close();
+
+                    Console.WriteLine($"\nnew line: {json}");
+
+                }
+                
+
             }
-
-
-
         }
     }
 }
