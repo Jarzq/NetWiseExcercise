@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomasz\\Desktop\\netWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise.csproj",
+      "projectUniqueName": "C:\\Users\\Tomasz\\Desktop\\NetWiseEx\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise.csproj",
       "projectName": "RecrutationExcerciseNetWise",
-      "projectPath": "C:\\Users\\Tomasz\\Desktop\\netWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise.csproj",
+      "projectPath": "C:\\Users\\Tomasz\\Desktop\\NetWiseEx\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise.csproj",
       "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomasz\\Desktop\\netWise\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise\\obj\\",
+      "outputPath": "C:\\Users\\Tomasz\\Desktop\\NetWiseEx\\RecrutationExcerciseNetWise\\RecrutationExcerciseNetWise\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
